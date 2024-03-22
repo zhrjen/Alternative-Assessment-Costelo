@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Anagrams Checker</title>
+</head>
+<body>
+		<script>
+			function anagrams(input1, input2) {
+            
+				const first = input1.replaceAll(" ", "").toLowerCase().split("").sort().join("");
+				const second = input2.replaceAll(" ", "").toLowerCase().split("").sort().join("");
+				return first === second;
+			}
+
+        
+			const firstWord = prompt("Please enter the first word/phrase:");
+			const secondWord = prompt("Please enter the second word/phrase:");
+
+        
+			const result = anagrams(firstWord, secondWord);
+
+        
+			if (result) {
+				alert("The words/phrases that were entered are anagrams.");
+			} else {
+				alert("The words/phrases that were entered are not anagrams.");
+			}
+		</script>
+	</body>
+</html>
